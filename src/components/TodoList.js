@@ -11,6 +11,7 @@ function TodoList(props) {
         <ul className="todo-list">
           {props.todos.map((todo, i) => (
             <Items
+           
                 filter={props.filter} 
               setTodos={props.setTodos}
               key={i}

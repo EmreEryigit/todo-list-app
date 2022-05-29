@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, { useState} from 'react'
 import TodoList from './TodoList'
 import Todos from './Todos'
 
@@ -6,10 +6,14 @@ function List() {
     
     const [todos, setTodos ] = useState([])
     const [filter, setFilter] = useState(0)
+	
+	
+
+    
   return (
     <React.Fragment>
       <Todos addTodo={setTodos} todos={todos} />
-      <TodoList filter={filter} todos={todos} setTodos={setTodos} />
+      <TodoList  filter={filter} todos={todos} setTodos={setTodos} />
       
      
       <footer className="footer">
@@ -18,7 +22,7 @@ function List() {
 			items left
 		</span>
 
-		<ul class="filters">
+		<ul className="filters">
 			<li>
 				<a onClick={() => setFilter(0)} className="selected">All</a>
 			</li>
@@ -30,7 +34,7 @@ function List() {
 			</li>
 		</ul>
 
-		<button class="clear-completed">
+		<button  className="clear-completed">
 			Clear completed
 		</button>
 	</footer>
