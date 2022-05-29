@@ -5,6 +5,7 @@ function Todos(props) {
     const submitHandler = (e) => {
         e.preventDefault()
         props.addTodo([...props.todos, newTodo])
+        setNewTodo("")
     }
    return (
     <div>
